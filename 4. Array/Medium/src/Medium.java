@@ -3,18 +3,31 @@ import java.util.*;
 
 public class Medium {
     public static void main(String[] args) {
-        List<Integer> A = Arrays.asList(new Integer[] {1,2,3});
-        List<Integer> ans = nextPermutation(A);
-
-        System.out.print("The next permutation is: [");
-        for (int i = 0; i < ans.size(); i++) {
-            System.out.print(ans.get(i) + " ");
-        }
-        System.out.println("]");
+       int[] arr = {1,2,3,2};
+        System.out.println(leaders(arr));
 
 
 
     }
+    // Utility Functions
+    static void swap(int[] nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+    static void reverse(int[] nums, int start){
+        int i = start;
+        int j = nums.length-1;
+        while(i<j){
+            swap(nums, i, j);
+            i++;
+            j--;
+        }
+    }
+
+
+
 
 
     // ***TWO SUM***
@@ -207,40 +220,51 @@ public class Medium {
     }
 
     // ** Next Permutation **
-    static List<Integer> nextPermutation(List<Integer> arr){
-         int n = arr.size();
+    static int[] nextPermutation(int[] nums) {
+        int n = nums.length;
 
-        //step 1 -  find the breakpoint
-        int index = -1;
-        for(int i= n-2; i>=0; i--){
-            if(arr.get(i)<arr.get(i+1)) {
+        // step 1 => find the breakpoint
+        int index = -1;  // the breakpoint
+        for(int i = n-2; i>=0; i--){
+            if(nums[i]<nums[i+1]){
                 index = i;
                 break;
             }
         }
-        // if there is no break point => meaning it is the last permutation so just revert to the the first permutation by reversing
-        if(index == -1){
-            Collections.reverse(arr);
-            return arr;
+        // if index still remains -1 then the array is in descending order=> reverse
+        if(index==-1){
+            reverse(nums,0);
+            return nums;
         }
-        // find the just bigger value than the breakpoint in right side of breakpoint and swap with breakpoint
+
+        // step 2 =>find the minimum greater number than the breakpoint in right side and swap
         for(int i=n-1; i>index; i--){
-            if(arr.get(i)>arr.get(index)){
-                int temp = arr.get(i);
-                arr.set(i, arr.get(index));
-                arr.set(index, temp);
+            if(nums[i]>nums[index]){
+                swap(nums,i,index);
                 break;
             }
         }
 
-        // reverse the right side.
-        List<Integer> sublist = arr.subList(index+1, n);
-        Collections.reverse(sublist);
+        // step 3 reverse the right side
+        reverse(nums,index+1);
 
-        return arr;
-
+        return nums;
     }
 
+    // ** Leaders in an array => all the elements, who have no greater element than them on the right side
+    static List<Integer> leaders(int[] arr){   // {10,22,12,3,0,6}
+        List<Integer> leaders = new ArrayList<>();
+        leaders.add(arr[arr.length-1]); // last element will always be a leader
+        for(int i = arr.length-2; i>=0; i--){
+            if(arr[i]>leaders.get(leaders.size()-1)){
+                leaders.add(arr[i]);
+            }
+        }
+        //Collections.reverse(leaders); //if they want leaders from left to right
+        return leaders;
+
+
+    }
 
 
 }

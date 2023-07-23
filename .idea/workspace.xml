@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="" />
+    <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4. Array/Medium/src/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/4. Array/Medium/src/Medium.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +64,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/4. Array/Medium/src/Medium.java</url>
-          <line>191</line>
+          <line>204</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
