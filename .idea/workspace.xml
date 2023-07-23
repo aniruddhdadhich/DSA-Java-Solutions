@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Java DSA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Java DSA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Basics P-2/HashMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/HashMaps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Basics P-2/HashSets.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/HashSets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Basics P-2/Recursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/Recursion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Basics P-2/collections.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/collections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2. Basics P-2/maths.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/maths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. Sorting/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/3. Sorting/src/Sorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4. Array/Easy/Easy.java" beforeDir="false" afterPath="$PROJECT_DIR$/4. Array/Easy/src/Easy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4. Array/Medium/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/4. Array/Medium/src/Medium.java" afterDir="false" />
-    </list>
+    <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
