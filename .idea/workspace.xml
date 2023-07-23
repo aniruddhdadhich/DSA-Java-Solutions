@@ -1,22 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="" />
+    <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Java DSA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Java DSA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. Basics P-2/HashMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/HashMaps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. Basics P-2/HashSets.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/HashSets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. Basics P-2/Recursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/Recursion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. Basics P-2/collections.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/collections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2. Basics P-2/maths.java" beforeDir="false" afterPath="$PROJECT_DIR$/2. Basics P-2/src/maths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3. Sorting/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/3. Sorting/src/Sorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4. Array/Easy/Easy.java" beforeDir="false" afterPath="$PROJECT_DIR$/4. Array/Easy/src/Easy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4. Array/Medium/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/4. Array/Medium/src/Medium.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2RQv7ggMNhHRmhcHDQWCXomU4J5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Learning\DSA\Java DSA\3. Sorting\src" />
+      <recent name="D:\Learning\DSA\Java DSA\4. Array\Easy\src" />
+      <recent name="D:\Learning\DSA\Java DSA\4. Array\Medium\src" />
+      <recent name="D:\Learning\DSA\Java DSA\2. Basics P-2\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -27,5 +57,27 @@
       <updated>1687194955245</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/4. Array/Medium/src/Medium.java</url>
+          <line>191</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

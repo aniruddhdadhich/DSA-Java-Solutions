@@ -210,10 +210,10 @@ public class Medium {
     static List<Integer> nextPermutation(List<Integer> arr){
          int n = arr.size();
 
-        // find the breakpoint
+        //step 1 -  find the breakpoint
         int index = -1;
         for(int i= n-2; i>=0; i--){
-            if(arr.get(i)>arr.get(i+1)) {
+            if(arr.get(i)<arr.get(i+1)) {
                 index = i;
                 break;
             }
