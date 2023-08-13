@@ -1,9 +1,10 @@
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int[] arr = {1,3,3,5,9,16};
-        int idx = serachInsert(arr, 8);
-        System.out.println(idx);
+        int[] arr = {3,1};  // 0
+
+        int id = searchInRotatedUnique(arr, 1);
+        System.out.println(id);
     }
 
 
@@ -64,17 +65,37 @@ public class BinarySearch {
         return ans;
     }
 
-    // 4. Search Insert Position
+    // 4. Search Insert Position => Basically lower bound implementation
     static int serachInsert(int [] nums, int target){
         int start = 0;
         int end = nums.length-1;
-        int ub = nums.length;
+        int lb = nums.length;
         while(start<=end){
             int i = (start+end)/2;
-            if(nums[i]==target){
-                return i;
+            if(nums[i]>=target){
+                lb =  i;
+                end = i-1;
             }
-            else if(nums[i]>target){
+            else{
+                start = i+1;
+            }
+        }
+        return lb;
+
+    }
+
+    // 5. floor and ceil of a number in the given sorted array
+    static void floorAndCeil(int[] arr, int value){
+        int start = 0;
+        int end = arr.length-1;
+        int ub = arr.length;
+        while(start<=end){
+            int i = (start+end)/2;
+            if(arr[i]==value){
+                System.out.println("Floor and Ceil both are: "+ arr[i]);
+                return;
+            }
+            else if(arr[i]>value){
                 ub = i;
                 end = i-1;
             }
@@ -82,8 +103,67 @@ public class BinarySearch {
                 start = i+1;
             }
         }
-        return ub;
-
+        System.out.println("Floor is :"+ (arr[ub-1]));
+        System.out.println("Ceil is :" + (arr[ub]));
     }
+
+    // 6. First and last occurrence of an element in the sorted array
+    static int lastOccurence(int[] arr, int value){
+        int start  = 0;
+        int end = arr.length -1;
+        int ub = -1;
+        // first occurrence will always be lower bound and last will be arr[upperbound -1]
+        while(start<=end){
+            int i = (start+end)/2;
+            if(arr[i]>value){
+                ub = i;
+                end = i-1;
+            }
+            else{
+                start = i+1;
+            }
+        }
+        return ub-1;
+    }
+
+    //7. Count the occurences of an element in an sorted array
+    // the ans = (upperbound index - lower bound index);
+
+    //8. Find the value in rotated sorted array (all distinct values)
+    static int searchInRotatedUnique(int[] arr, int value){
+        int start = 0;
+        int end = arr.length - 1;
+        int ans = -1;
+
+        while(start<=end){
+            int i = (start+end)/2;
+            if(arr[i]==value){
+                ans = i;
+                break;
+            }
+            if(arr[i]>=arr[start]){                   //{3,1};  1
+                //left half is sorted
+                if(value>=arr[start] && value<=arr[i]){
+                    end = i-1;
+                }
+                else{
+                    start = i+1;
+                }
+            }
+            else{
+                //right half is sorted
+                if(value<=arr[end] && value>=arr[i]){
+                    start = i+1;
+                }
+                else{
+                    end = i-1;
+                }
+            }
+
+        }
+    return ans;
+    }
+
+    // 9. Find the value in rotated Sorted Array(may contain duplicate value)
 
 }
