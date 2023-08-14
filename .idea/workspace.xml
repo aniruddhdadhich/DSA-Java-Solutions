@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Linked List/Linked List.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked List/src/LL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binary Search/src/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Binary Search/src/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Binary Search/BinarySearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Binary Search/BinarySearch.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +37,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "20",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
