@@ -1,20 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        LL list = new LL();
+            DLL dll = new DLL();
 
-        list.insertAtFirst(5);
-        list.insertAtFirst(6);
-        list.insertAtFirst(9);
-        list.insertAtFirst(10);
-        list.insertAtFirst(12);
-        list.insertAtFirst(19);
-        list.insertAtFirst(60);
-        list.insertAtFirst(40);
-        list.insertAtLast(56);
-        list.display();
-        int id = list.getIndex(10);
-        System.out.println(id);
+            dll.insertFirst(12);
+            dll.insertFirst(13);
+            dll.insertFirst(10);
+            dll.display();
+            dll.insertAt(25, 2);
+            dll.display();
 
+            int len = dll.getSize();
+            System.out.println(len);
     }
 }
 

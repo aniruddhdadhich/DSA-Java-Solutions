@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Linked List/Linked List.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Linked List/src/LL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked List/src/DLL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Linked List/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Linked List/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Linked List/LL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Linked List/LL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Linked List/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Linked List/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
