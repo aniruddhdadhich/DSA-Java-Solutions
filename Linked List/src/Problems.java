@@ -42,20 +42,7 @@ public class Problems {
 //                }
 //            }
 //
-//            if(head1 == null){
-//                while(head2 != null){
-//                    tail.next = head2;
-//                    head2 = head2.next;
-//                    tail = tail.next;
-//                }
-//            }
-//            else{
-//                while(head1 != null){
-//                    tail.next = head1;
-//                    head1 = head1.next;
-//                    tail = tail.next;
-//                }
-//            }
+//           tail.next = (head1 != null) ? head1 : head2;
 //
 //
 //            return dummyNode.next;
@@ -147,7 +134,7 @@ public class Problems {
 //
 //        }
 
-        // Q.6 Finding the middle of the linked list
+        // Q.6a. Finding the middle of the linked list
 //        public ListNode middleNode(ListNode head) {
 //            ListNode slow = head;
 //            ListNode fast = head;
@@ -156,6 +143,21 @@ public class Problems {
 //                fast = fast.next.next;
 //            }
 //            return slow;
+//        }
+
+        //Q.6b. Finding the middle with different approach, which is used when you have to split list in the middle.
+//        public static ListNode getMiddleNode(ListNode head) {
+//            if (head == null || head.next == null) {
+//                return head;
+//            }
+//            ListNode midPrev = null;
+//            while (head != null && head.next != null) {
+//                midPrev = (midPrev == null) ? head : midPrev.next;
+//                head = head.next.next;
+//            }
+//            ListNode mid = midPrev.next;
+//            midPrev.next = null;              // breaking at midpoint
+//            return mid;
 //        }
 //
 
@@ -240,6 +242,25 @@ public class Problems {
 //                n = n/10;
 //            }
 //            return sum;
+//        }
+
+
+        // Q11. sort a linked list
+        // approach => Merge sort => 1) find middle 2) split in two parts and sort them, 3) bring them back and merge them.
+//        public ListNode sortList(ListNode head) {
+//            // merge sort
+//            // recursively divide the list and then merge
+//
+//            //base case
+//            if(head==null || head.next == null){
+//                return head;    // .next logic => if single node then it would be sorted by itself
+//            }
+//
+//            //find the mid
+//            ListNode mid = getMiddleNode(head);       // Q.6b
+//            ListNode leftHalf = sortList(head);
+//            ListNode rightHalf = sortList( mid);
+//            return merge(leftHalf,rightHalf);          // Merging two sorted lists. Q.2.
 //        }
 
 
