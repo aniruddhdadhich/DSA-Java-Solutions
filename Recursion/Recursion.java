@@ -19,11 +19,10 @@ public class Recursion {
 //        System.out.println(flag);
 
 //        System.out.println(fibonacci(8));
-        int[] arr= {3,1,2};
+        int[] arr= {1,2,1};
         ArrayList<Integer> ans = new ArrayList<Integer>();
-        subsets(arr);
-
-
+        int ct = countSubseqWithKSum(arr,ans,0,2,0);
+        System.out.println(ct);
     }
 
     // BASIC Problems
@@ -154,6 +153,83 @@ public class Recursion {
         ans.remove(ans.size()-1);
         util(arr,ans,i+1,output);
     }
+
+    // Q10. Print all the subseq of an array if the sum of the subseq is target;
+    public static void printSubseqWithKSum(int[] arr, ArrayList<Integer> ans, int i, int target, int sum){
+        //base
+        if(i>=arr.length){
+            if(sum==target){
+                System.out.println(ans);
+            }
+            return;
+        }
+        //take
+        ans.add(arr[i]);
+        sum += arr[i];
+        printSubseqWithKSum(arr, ans, i+1, target, sum);
+
+        //not take
+        ans.remove(ans.size()-1);
+        sum-=arr[i];
+        printSubseqWithKSum(arr, ans,i+1, target, sum);
+    }
+
+    ///Q11. Print any subseq of an array if the sum of subseq is target
+    public static boolean printAnySubseqWithKSum(int[] arr, ArrayList<Integer> ans, int i, int target ,int sum){
+        //base
+        if(i>=arr.length){
+            // if condition is satisfied then return true
+            if(sum==target){
+                System.out.println(ans);
+                return true;
+            }
+            return false;
+        }
+        //take
+
+        ans.add(arr[i]);
+        sum += arr[i];
+        if(printAnySubseqWithKSum(arr, ans, i+1, target, sum)) return true;
+
+        //not take
+        ans.remove(ans.size()-1);
+        sum-=arr[i];
+        if(printAnySubseqWithKSum(arr, ans,i+1, target, sum)) return true;
+
+        return false;
+    }
+
+    //Q12. Print the count of subsequence with the given sum
+    public static int countSubseqWithKSum(int[] arr, ArrayList<Integer> ans, int i, int target ,int sum){
+        //base
+        if(i>=arr.length){
+            // another base case to reduce complexity
+            if(sum>target){   // Assuming Array contains only positives
+                return 0;   // no need to call next recursions because this will never add up to target.
+            }
+            // if condition is satisfied then return true
+            if(sum==target){
+                return 1;
+            }
+            return 0;
+        }
+        //take
+
+        ans.add(arr[i]);
+        sum += arr[i];
+        int l = countSubseqWithKSum(arr, ans, i+1, target, sum);
+
+        //not take
+        ans.remove(ans.size()-1);
+        sum-=arr[i];
+        int r = countSubseqWithKSum(arr, ans,i+1, target, sum);
+
+        return l+r;
+    }
+
+
+
+
 }
 
 
