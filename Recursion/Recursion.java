@@ -19,10 +19,15 @@ public class Recursion {
 //        System.out.println(flag);
 
 //        System.out.println(fibonacci(8));
-        int[] arr= {1,2,1};
-        ArrayList<Integer> ans = new ArrayList<Integer>();
-        int ct = countSubseqWithKSum(arr,ans,0,2,0);
-        System.out.println(ct);
+//        int[] arr= {1,2,1};
+//        ArrayList<Integer> ans = new ArrayList<Integer>();
+//        int ct = countSubseqWithKSum(arr,ans,0,2,0);
+//        System.out.println(ct);
+
+        int[] arr = {2,3,6,7};
+        List<List<Integer>> ans = findCombo(arr, 7);
+        System.out.println(ans);
+
     }
 
     // BASIC Problems
@@ -226,6 +231,42 @@ public class Recursion {
 
         return l+r;
     }
+
+    //Q13. Merge Sort => check sorting folder
+    //Q14. Quick Sort => check sorting folder
+
+    //Q15. Combination sum - 1
+    // Given an array of distinct integers and a target,
+    // you have to return the list of all unique combinations where the chosen numbers sum to target. You may return the combinations in any order.
+    //The same number may be chosen from the given array an unlimited number of times.
+    // Two combinations are unique if the frequency of at least one of the chosen numbers is different.
+
+
+    // leetcode variant
+    public static List<List<Integer>> findCombo(int[] arr, int target){
+        List<List<Integer>> output = new ArrayList<List<Integer>>();
+        combinationSumOne(0,arr, new ArrayList<>(), target, output);
+        return output;
+    }
+
+    public static void combinationSumOne(int i, int[] arr, ArrayList<Integer> list, int target,List<List<Integer>> output ){
+        //base
+        if(i>=arr.length){
+            if(target==0){
+                output.add(new ArrayList<>(list));
+            }
+            return;
+        }
+        if(arr[i]<=target){
+            //pick
+            list.add(arr[i]);
+            combinationSumOne(i,arr,list,target-arr[i],output);
+            //not pick
+            list.remove(list.size()-1);
+        }
+        combinationSumOne(i+1, arr, list, target,output);
+    }
+
 
 
 
