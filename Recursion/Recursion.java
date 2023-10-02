@@ -261,9 +261,10 @@ public class Recursion {
             //pick
             list.add(arr[i]);
             combinationSumOne(i,arr,list,target-arr[i],output);
-            //not pick
+            // removing the element
             list.remove(list.size()-1);
         }
+        //not pick
         combinationSumOne(i+1, arr, list, target,output);
     }
 

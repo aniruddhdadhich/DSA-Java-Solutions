@@ -9,7 +9,7 @@ public class BinarySearch {
 
 
     // 1. Binary Search implementation
-    static int binarySearch(int[] nums, int target){
+    static int binarySearch(int[] nums, int target) {
         int start=0;
         int end = nums.length-1;
 
@@ -34,7 +34,7 @@ public class BinarySearch {
         int end = arr.length-1;
         int ans = arr.length;
         while(start<=end){
-            int i = (start + end)/2;
+            int i = start+(end-start)/2;   // optimization if start and end range in 2^31-1 levels.
             if(arr[i]>=target){
                 ans = i;
                 end = i-1;
@@ -87,7 +87,7 @@ public class BinarySearch {
     static void floorAndCeil(int[] arr, int value){
         int start = 0;
         int end = arr.length-1;
-        int ub = arr.length;
+        int lb = arr.length;
         while(start<=end){
             int i = (start+end)/2;
             if(arr[i]==value){
@@ -95,15 +95,15 @@ public class BinarySearch {
                 return;
             }
             else if(arr[i]>value){
-                ub = i;
+                lb = i;
                 end = i-1;
             }
             else{
                 start = i+1;
             }
         }
-        System.out.println("Floor is :"+ (arr[ub-1]));
-        System.out.println("Ceil is :" + (arr[ub]));
+        System.out.println("Floor is :"+ (arr[lb-1]));
+        System.out.println("Ceil is :" + (arr[lb]));
     }
 
     // 6. First and last occurrence of an element in the sorted array
@@ -113,7 +113,7 @@ public class BinarySearch {
         int ub = -1;
         // first occurrence will always be lower bound and last will be arr[upperbound -1]
         while(start<=end){
-            int i = (start+end)/2;
+            int i = start + (end-start)/2;
             if(arr[i]>value){
                 ub = i;
                 end = i-1;

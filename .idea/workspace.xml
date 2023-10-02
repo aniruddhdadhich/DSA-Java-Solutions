@@ -7,7 +7,10 @@
     <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Linked List/src/Problems.java" beforeDir="false" afterPath="$PROJECT_DIR$/Linked List/src/Problems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4. Array/Easy/src/Easy.java" beforeDir="false" afterPath="$PROJECT_DIR$/4. Array/Easy/src/Easy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4. Array/Medium/src/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/4. Array/Medium/src/Medium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binary Search/src/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Binary Search/src/BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recursion/Recursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recursion/Recursion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "/home/aniruddh/Desktop/Personal/DSA/DSA-Java-Solutions/Recursion",
+    "last_opened_file_path": "/home/aniruddh/Desktop/Personal/DSA/DSA-Java-Solutions",
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -75,16 +78,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/4. Array/Medium/src/Medium.java</url>
-          <line>204</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

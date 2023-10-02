@@ -194,14 +194,14 @@ public class Easy {
         // The case where m and n aren't exhausted
         while(i<m && j<n){
             if(arr1[i]<=arr2[j]){
-                if(union.size()==0 || union.get(union.size()-1)!=arr1[i]){
+                if(union.isEmpty() || union.get(union.size()-1)!=arr1[i]){
                     union.add(arr1[i]);
                 }
                 i++;
             }
 
             else{
-                if(union.size()==0 || union.get(union.size()-1) != arr2[j]){
+                if(union.isEmpty() || union.get(union.size()-1) != arr2[j]){
                      union.add(arr2[j]);
                     }
                 j++;
@@ -383,7 +383,6 @@ public class Easy {
     // Optimal Approach => Using Two Pointers => BUT ONLY FOR POSITIVE AND ZEROS
     static int longestSubarrayWithSumTwoPointer(int[] arr, int k){
         int n = arr.length;
-
         int left= 0;
         int right=0;
         int sum = arr[0];

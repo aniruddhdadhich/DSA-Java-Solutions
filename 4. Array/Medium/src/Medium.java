@@ -3,8 +3,8 @@ import java.util.*;
 
 public class Medium {
     public static void main(String[] args) {
-       int[] arr = {1,2,3,2};
-        System.out.println(leaders(arr));
+       int[] arr = {-5,-2,0,3,4};
+       maxSumSubarrayPrint(arr);
 
 
 
@@ -161,7 +161,7 @@ public class Medium {
 
     // *** Kadan'es Algo => Printing the maxSum subarray ***
     static void maxSumSubarrayPrint(int[] arr){
-        int sum = 0;
+        int sum = 0;                            // [-5,-3,0,3,4]
         int maxSum = Integer.MIN_VALUE;
         int startIndex = -1;
         int endIndex = -1;
@@ -181,7 +181,7 @@ public class Medium {
                 sum = 0;
             }
         }
-        for(int i=startIndex; i<=endIndex ; i++){
+        for(int i=startIndex; i <= endIndex ; i++){
             System.out.print(arr[i]+" ");
         }
 
