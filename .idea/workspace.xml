@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4. Array/Easy/src/Easy.java" beforeDir="false" afterPath="$PROJECT_DIR$/4. Array/Easy/src/Easy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binary Search/src/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Binary Search/src/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java DSA/Easy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java DSA/Easy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java DSA/HashMaps.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java DSA/HashMaps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java DSA/HashSets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java DSA/HashSets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java DSA/Medium.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java DSA/Medium.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java DSA/Recursion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java DSA/Recursion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java DSA/collections.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java DSA/collections.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java DSA/maths.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java DSA/maths.class" afterDir="false" />
-    </list>
+    <list default="true" id="de615aba-4e56-4c41-a48c-ff31eebb98c2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
