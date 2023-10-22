@@ -1,9 +1,11 @@
+import java.util.Stack;
+
 public class BinarySearch {
 
-    public static void main(String[] args) {
-        int[] arr = {1,5,4,3,2,6,8,4,3,1};  // ans = 8, index = 6
-        int id = peakElement(arr);
-        System.out.println(id);
+    public static <Char> void main(String[] args) {
+//        int[] arr = {1,4,9,16,25,36,49,64,81,100,121,144,169,196,225,256,289,324,361,400,441,484};  // ans = 8, index = 6
+        System.out.println(squareRoot(357604));
+
     }
 
 
@@ -123,6 +125,47 @@ public class BinarySearch {
             }
         }
         return ub-1;
+    }
+
+    // 6a. Leetcode variant of first and last occ.
+    public int[] searchRange(int[] nums, int target) {
+        int[] ans = {-1,-1};
+        ans[0] = firstIndex(nums,target);
+        ans[1] = lastIndex(nums,target);
+        return ans;
+    }
+
+    public int firstIndex(int[] nums, int target){
+        int s = 0;
+        int e = nums.length-1;
+        int f = -1;
+        while(s<=e){
+            int mid = s + (e-s)/2;
+            if(nums[mid]>=target){    // hume equal bhi mile to bhi hum peeche jayenge to find first
+                e = mid-1;
+            }
+            else if(nums[mid]<target){
+                s = mid+1;
+            }
+            if(nums[mid]==target) f = mid;
+        }
+        return f;
+    }
+    public int lastIndex(int[] nums, int target){
+        int s = 0;
+        int e = nums.length-1;
+        int l = -1;
+        while(s<=e){
+            int mid = s + (e-s)/2;
+            if(nums[mid]>target){
+                e = mid-1;
+            }
+            else if(nums[mid]<=target){    // hume equal bhi mile to bhi hum aage jayenge to find last
+                s = mid+1;
+            }
+            if(nums[mid]==target) l = mid;
+        }
+        return l;
     }
 
     //7. Count the occurences of an element in an sorted array
@@ -349,5 +392,30 @@ public class BinarySearch {
             }
         }
         return -1;
+    }
+
+
+    // 14. Find square root integer part by binary search
+    static int squareRoot(int n){
+        int low = 0;
+        int high = n;
+        int ans= 1;
+        if(n==1){
+            return 1;
+        }
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            if((mid*mid)==n){
+                return mid;
+            }
+            else if((mid*mid)>n){
+                high = mid-1;
+            }
+            else{
+                ans = mid;
+                low = mid+1;
+            }
+        }
+        return ans;
     }
 }

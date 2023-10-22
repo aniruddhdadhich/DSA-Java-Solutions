@@ -1,9 +1,15 @@
+import com.sun.jdi.IntegerType;
+
 import java.lang.reflect.Array;
 import java.util.*;
 
 public class Easy {
     public static void main(String[] args) {
         System.out.println("Here are all the EASY Array problems discussed in Striver's DSA sheet.");
+        int[] arr = {-1,0,1,2,-1,-4};
+
+        System.out.println(threeSum(arr));
+
     }
 
 
@@ -402,4 +408,99 @@ public class Easy {
         return maxLen;                          // Return the max length.
     }
 
+
+    // Given an array return true if the number of occurences of each value in the array is unique. (Leetcode 1207)
+    static boolean uniqueOccurences(int[] arr){
+        HashMap<Integer,Integer> map = new HashMap<>();
+        // create map from arr
+        for(int i: arr){
+            map.put(i,map.getOrDefault(i,0)+1);
+        }
+        // create a set from the map
+        HashSet<Integer> st = new HashSet<>();
+        for(int j:map.keySet()){
+            st.add(map.get(j));
+        }
+
+        // now compare => are the sizes of both map and set are same?
+        // if same then there is no repetition in no. of occ.
+        // if no then there is some no(s) which are coming twice or more so they
+        // weren't included in the set second time onwards.
+        if(map.size() == st.size()) return true;
+        else return false;
+    }
+
+    // find the value which comes twice in an array
+    // 1. sum method 2. XOR method.
+    public static int findDuplicate(ArrayList<Integer> arr) {
+        int n = arr.size();
+        int arrSum = 0;
+        int nSum;
+        for(int i=0; i<n; i++){
+            arrSum += arr.get(i);
+        }
+        nSum= (n*(n-1))/2;
+
+        return nSum-arrSum;
+    }
+
+    // find the values and return them in an array which comes twice in input array (Leetcode 442)
+    public static List<Integer> findDuplicates(int[] arr){
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int val:arr){
+            map.put(val,map.getOrDefault(val,0)+1);
+        }
+
+        List<Integer> list = new ArrayList<>();
+        for(int i:map.keySet()){
+            if(map.get(i)==2){
+                list.add(i);
+            }
+        }
+        return list;
+    }
+
+    //optimized approach
+        //=> Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears once or twice, return an array of all the integers that appears twice.
+
+        // shouldn't use extra space and linear runtime
+    public static List<Integer> findDuplicatesOptimize(int[] arr){
+        List<Integer> output = new ArrayList<>();
+        for(int i=0;i<arr.length;i++){
+            int index = Math.abs(arr[i]) - 1;
+
+            //if already negative means you visited this prev. => this is a duplicate
+            if(arr[index]<0) output.add(index+1);
+            else arr[index] = -1*arr[index];
+        }
+        return output;
+    }
+
+
+    //3Sum
+    public static List<List<Integer>> threeSum(int[] nums){
+        List<List<Integer>> output = new ArrayList<>();
+        Arrays.sort(nums);
+        for(int i=0; i<nums.length-2; i++){
+            int p1 = i+1;
+            int p2 = nums.length-1;
+            while(p1<p2){
+                if(nums[p1]+nums[p2]==-nums[i]){
+                    output.add(Arrays.asList(nums[i],nums[p1],nums[p2]));
+                    while(p1<p2 && nums[p1]==nums[p1+1]) p1++;  // to avoid duplicates shift until you get different value
+                    while(p1<p2 && nums[p2]==nums[p2-1]) p2--;  // same for last pointer
+                    p1++; // shift once if you get a differernt value
+                    p2--;
+                }
+                else if(nums[p1]+nums[p2]>-nums[i]){
+                    p2--;
+                }
+                else{
+                    p1++;
+                }
+            }
+        }
+
+        return output;
+    }
 }
