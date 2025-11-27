@@ -34,20 +34,26 @@ public class Easy {
 
     // Find the second largest value in the array
     static int secondLargest(int[] arr){
+        //edge case #1 - if no elements or only one element
+        if(arr.length==0 || arr.length==1){
+            return -1;
+        }
         int max = arr[0];
         int sMax = Integer.MIN_VALUE;
-        for(int i=0;i<arr.length; i++){
+        for(int i=1;i<arr.length; i++){
             if(arr[i]>max){
                 sMax = max;
                 max = arr[i];
             }
+            //if some value is lesser than max but greater than smax
             else if(arr[i]<max && arr[i]>sMax){
                 sMax = arr[i];
             }
         }
-        // if all the values are same
+        //Edge case #2 - if all the values are same
         if(sMax == Integer.MIN_VALUE) return -1;
-        else return sMax;
+        
+        return sMax;
 
     }
 
@@ -122,16 +128,15 @@ public class Easy {
 
         // Optimal Approach using - reversal algorithm   //TC = O(k)+O(n-k)+ O(n) = O(2n) But space C = O(1); No extra space.
         k = k%arr.length;
-        reverse(arr,0,k-1);
-        reverse(arr,k,arr.length-1);
-        reverse(arr,0,arr.length-1);
+        reverse(arr,0,k-1);   // step 1 reverse first k elements
+        reverse(arr,k,arr.length-1);  // step 2 reverse remaining n-k elements
+        reverse(arr,0,arr.length-1); // step3 reverse all elements
         System.out.println(Arrays.toString(arr));
 
         // If asked for right rotation
-        //reverse(arr,0,n-k-1);  // n is length and k is rotation places.
-        //reverse(arr,n-k,n-1);
-        //reverse(arr,0,n-1);
+        // step 3 -> step1 -> step2.
     }
+
 
 
 
@@ -175,10 +180,10 @@ public class Easy {
 
         //Single pointer approach
         int p = 0;
-        for(int i=0;i<arr.length; i++){
+        for(int i=0; i<arr.length; i++){
             if(arr[i]!=0){
                 arr[p] = arr[i];
-                p++;
+                p++; 
             }
         }
         // Now fill the zeros at the end
@@ -217,14 +222,14 @@ public class Easy {
 
         // The case where n is done.
         while(i<m){
-            if(union.get(union.size()-1) != arr1[i]) {
+            if(union.isEmpty() || union.get(union.size()-1) != arr1[i]) {    // why putting isEmpty => for the edge case where any one of the array is empty.
                 union.add(arr1[i]);
             }
             i++;
         }
         // the case where m is done.
         while(j<n){
-            if(union.get(union.size()-1)!= arr2[j]){
+            if(union.isEmpty() || union.get(union.size()-1)!= arr2[j]){
                 union.add(arr2[j]);
 
             }
@@ -295,11 +300,11 @@ public class Easy {
 
         //O(N)
         int xor = 0;
-        for(int i=0; i<N-1; i++){
+        for(int i=0; i<N-1; i++){     
             xor = xor^arr[i];
             xor = xor^(i+1); // start with 1, goes till N-1 but N is missed so take xor with N in next step;
         }
-        xor = xor^N;
+        xor = xor^N;    // leetcode wale question mein 0 se N tak hai to vaha if you do i+1 wala xor to ye last N ke sath XOR ki jarurt nahi padegi
         return xor;
     }
 
