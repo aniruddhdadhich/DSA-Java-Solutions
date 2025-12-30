@@ -45,7 +45,7 @@ public class Patterns{
 //        alphaTrianglePattern(5);
 
         //A15
-        borderPattern(4);
+        // borderPattern(4);
 
     }
 

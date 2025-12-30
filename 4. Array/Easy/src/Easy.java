@@ -80,7 +80,7 @@ public class Easy {
 
 
 
-    // Remove the duplicate values from the array
+    // Remove the duplicate values from the sorted array
     static int removeDuplicate(int[] arr){
         int p1 =0;
         for(int i=0;i<arr.length;i++){
@@ -231,7 +231,6 @@ public class Easy {
         while(j<n){
             if(union.isEmpty() || union.get(union.size()-1)!= arr2[j]){
                 union.add(arr2[j]);
-
             }
             j++;
         }
@@ -348,15 +347,12 @@ public class Easy {
     static int longestSubarrayWithSumBrute(int[] arr, int k){
         int n = arr.length;
         int maxCount =0;
-
-
         for(int i=0;i<n; i++){
             int count = 0 ;
             int sum =0;
             for(int j=i; j<n; j++){
                 sum +=arr[j];
                 count++;
-
                 if(sum == k){
                     maxCount = Math.max(count,maxCount);
                     break;
@@ -391,7 +387,7 @@ public class Easy {
         }
         return maxLen;
     }
-    // Optimal Approach => Using Two Pointers => BUT ONLY FOR POSITIVE AND ZEROS
+    // Optimal Approach => Using Varibale Sliding window => BUT ONLY FOR POSITIVE AND ZEROS
     static int longestSubarrayWithSumTwoPointer(int[] arr, int k){
         int n = arr.length;
         int left= 0;

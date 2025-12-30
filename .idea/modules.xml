@@ -3,8 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Binary Search/Binary Search.iml" filepath="$PROJECT_DIR$/Binary Search/Binary Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DynamicProg/DynamicProg.iml" filepath="$PROJECT_DIR$/DynamicProg/DynamicProg.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java DSA.iml" filepath="$PROJECT_DIR$/.idea/Java DSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/Linked List/Linked List.iml" filepath="$PROJECT_DIR$/Linked List/Linked List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Recursions/Recursions.iml" filepath="$PROJECT_DIR$/Recursions/Recursions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stackk/Stackk.iml" filepath="$PROJECT_DIR$/Stackk/Stackk.iml" />
     </modules>
   </component>
 </project>

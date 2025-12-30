@@ -1,10 +1,23 @@
 public class maths {
     public static void main(String[] args) {
 
-        System.out.println(gcdEuclidean(29,58));
+       
 
 
     }
+
+    // Count digits
+    static int countDigits(int N){
+        if(N==0) return 1;
+        int cnt =0;
+        while(N!=0){
+            N = N/10;
+            cnt++;
+        }
+        return cnt;
+    }
+
+
     // Check that the no. is palindrome or not.
     static boolean palindrome(int N){
         int rev = reverse(N);
@@ -16,24 +29,24 @@ public class maths {
         }
     }
 
-    // Reverse the digits of a given no.
+    // Reverse the digits of a given no. 
     static int reverse(int N){
-        boolean neg = false;
-        if(N<0){
-            N = -1*N;
-            neg = true;
-        }
+        // boolean neg = false;
+        // if(N<0){
+        //     N = -1*N;
+        //     neg = true;
+        // }
 
         int dig;
         int num=0;
-        while(N>0){
+        while(N!=0){
             dig = N%10;
             num = 10*num + dig;
             N = N/10;
         }
-        if(neg){
-            return -1*num;
-        }
+        // if(neg){
+        //     return -1*num;
+        // }
         return num;
     }
 
@@ -78,6 +91,7 @@ public class maths {
         return hcf;
 
     }
+    // Better way -> start the loop from lower to 1, basically reverse order loop,
 
     //Euclidean Algo (using recursion) => GCD(a,b) => GCD(a-b,b) Further break down the bigger number, till one of them becomes zero
     // The moment one becomes 0 other will be the HCF.

@@ -5,28 +5,7 @@ import java.util.List;
 
 public class Recursion {
     public static void main(String[] args) {
-//        printNTimes(5,"Jai Shree Krishna");
-//        oneToN(5);
-//        NtoOne(5);
-//        System.out.println(sumTillN(3,0));
-//        sumTillNPrint(100,0);
-
-//        int[] arr = {10,24,65,14,23,87,98,45};
-//        reverseArr(arr,0,arr.length-1);
-
-//        String str = "MADAM";
-//        boolean flag = isPalindrome(str,0);
-//        System.out.println(flag);
-
-//        System.out.println(fibonacci(8));
-//        int[] arr= {1,2,1};
-//        ArrayList<Integer> ans = new ArrayList<Integer>();
-//        int ct = countSubseqWithKSum(arr,ans,0,2,0);
-//        System.out.println(ct);
-
-        int[] arr = {2,3,6,7};
-        List<List<Integer>> ans = findCombo(arr, 7);
-        System.out.println(ans);
+        System.out.println("hi");
 
     }
 
@@ -268,6 +247,17 @@ public class Recursion {
         combinationSumOne(i+1, arr, list, target,output);
     }
 
+    // tower of hanoi
+    static void hanoi(int n, int source, int dest, int helper){
+        if(n==1){
+            System.out.println("Moving disk "+n+" from tower "+source+" to "+dest );
+
+            return;
+        }
+        hanoi(n-1, source,helper,dest);
+        System.out.println("Moving disk "+n+" from tower "+source+" to "+dest );
+        hanoi(n-1, helper,dest,source);
+    }
 
 
 

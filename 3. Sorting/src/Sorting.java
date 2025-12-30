@@ -12,6 +12,32 @@ public class Sorting{
 
     }
 
+    // recursion sorting
+    static void sort(ArrayList<Integer> arr){
+        //base
+        if(arr.size()==1){
+            return;
+        }
+        // hypothesis // array before the last index should sort by itself.
+        int lastVal = arr.remove(arr.size()-1);
+        sort(arr);
+        //induction // insert the last value now
+        insert(arr,lastVal);
+    }
+    static void insert(ArrayList<Integer> arr, int temp){
+        //base
+        if(arr.isEmpty() || arr.get(arr.size()-1)<=temp){
+            arr.add(temp);
+            return;
+        }
+        // hypothesis
+        int lastOne = arr.remove(arr.size()-1);
+        insert(arr,temp);
+
+        // induction - insert the last value
+        arr.add(lastOne);
+    }
+
     // Selection Sort => Take the minimum, swap it with the first place of concerned unsorted part.
     static int[] selection(int[] arr){
         for(int i=0; i<arr.length-1;i++){   // outer loop which will run till n-2

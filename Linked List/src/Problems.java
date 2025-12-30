@@ -40,7 +40,7 @@ public class Problems {
 //                    head2= head2.next;
 //                    tail = tail.next;
 //                }
-//            }
+//            } 
 //
 //           tail.next = (head1 != null) ? head1 : head2;
 //
@@ -71,7 +71,7 @@ public class Problems {
 //        }
 //        return false;
 //}
-        // 4. Finding the length of the cycle if it exists
+        // 4. Finding the length of the cycle if it exists - better than next
 //        public static int lengthOfLoop(Node head) {
 //            // Write your code here
 //            Node slow = head;

@@ -70,18 +70,18 @@ public class BinarySearch {
     static int serachInsert(int [] nums, int target){
         int start = 0;
         int end = nums.length-1;
-        int lb = nums.length;
+        int ans = nums.length;
         while(start<=end){
             int i = (start+end)/2;
-            if(nums[i]>=target){
-                lb =  i;
+            if(nums[i]>=target){            // This is the only thing that has to be changed.
+                ans =  i;
                 end = i-1;
             }
             else{
                 start = i+1;
             }
         }
-        return lb;
+        return ans;
 
     }
 
