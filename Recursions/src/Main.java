@@ -5,8 +5,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(josephus(40,7));
+        int num = 12234;
+        char[] arr = Integer.toString(num).toCharArray();
+        System.out.println(arr.length);
+
     }
+
 
     // BASIC Problems
 
@@ -117,6 +121,7 @@ public class Main {
         }
 
     }
+
     //Q9b Leetcode variant of the same question
     public static List<List<Integer>> subsets(int[] nums) {
 
@@ -231,6 +236,7 @@ public class Main {
         combinationSumOne(0, arr, new ArrayList<>(), target, output);
         return output;
     }
+
     public static void combinationSumOne(int i, int[] arr, ArrayList<Integer> list, int target, List<List<Integer>> output) {
         //base
         if (i >= arr.length) {
@@ -270,6 +276,7 @@ public class Main {
         helper(s, curr, 1, output);
         return output;
     }
+
     static void helper(String s, String current, int index, ArrayList<String> output) {
         // base case
         if (index == s.length()) {
@@ -292,6 +299,7 @@ public class Main {
 
     //Q18 keypad mapping - given nokia phone string "24" what all combination can be there of msg.
     public static String[] keypad = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs", "uv", "wxyz"};
+
     static void printKeypadCombination(String str, int i, String combination) {
 
         //base case
@@ -311,79 +319,137 @@ public class Main {
 
 
     //Q19 all permutation of a string
-    public static void allPermutation(String s, String output){
-        if(s.length()==0){
+    public static void allPermutation(String s, String output) {
+        if (s.length() == 0) {
             System.out.println(output);
             return;
         }
-        for(int i=0;i<s.length(); i++){
+        HashSet<Character> used = new HashSet<>();
+
+        for (int i = 0; i < s.length(); i++) {
             char currChar = s.charAt(i);
-            String remainingStr = s.substring(0,i)+s.substring(i+1);
-            allPermutation(remainingStr,output+currChar);
+
+            if (used.contains(currChar)) continue;   // prune duplicate choice
+            used.add(currChar);
+
+            String remainingStr = s.substring(0, i) + s.substring(i + 1);
+            allPermutation(remainingStr, output + currChar);
+        }
+    }
+
+    public static void allPermutationBT(String s, int i) {
+        s.charAt(i);
+        for (int j = 1; j < s.length(); j++) {
+            // swap ith and jth
+
         }
     }
 
     //Q20 all possible paths from 0,0 to n,m
-    public static int totalPaths(int i , int j, int n ,int m){
-        if(i==n || j==m){
+    public static int totalPaths(int i, int j, int n, int m) {
+        if (i == n || j == m) {
             return 0;
         }
-        if(i==n-1 && j==m-1){
+        if (i == n - 1 && j == m - 1) {
             return 1;
         }
-        int rightChoice = totalPaths(i+1, j, n,m);
-        int downChoice = totalPaths(i,j+1,n,m);
-        return rightChoice+downChoice;
+        int rightChoice = totalPaths(i + 1, j, n, m);
+        int downChoice = totalPaths(i, j + 1, n, m);
+        return rightChoice + downChoice;
     }
 
     //Q21 string's case change
-    public static void caseChange(String s, int i, String output){
-        if(i==s.length()){
+    public static void caseChange(String s, int i, String output) {
+        if (i == s.length()) {
             System.out.println(output);
             return;
         }
-        caseChange(s,i+1, output+Character.toUpperCase(s.charAt(i)));   // add the guy in caps
-        caseChange(s,i+1,output+s.charAt(i)); // add guy in non-caps
+        caseChange(s, i + 1, output + Character.toUpperCase(s.charAt(i)));   // add the guy in caps
+        caseChange(s, i + 1, output + s.charAt(i)); // add guy in non-caps
     }
 
     //Q22 Generate all balanced parentheses
-    public static ArrayList<String> allbalanced(int n){
+    public static ArrayList<String> allbalanced(int n) {
         ArrayList<String> output = new ArrayList<>();
-        helper(output,n,n,"");
-        return  output;
+        helper(output, n, n, "");
+        return output;
     }
-    public static void helper(ArrayList<String> output, int open, int closed, String current){
-        if(open==0 &&  closed==0){
+
+    public static void helper(ArrayList<String> output, int open, int closed, String current) {
+        if (open == 0 && closed == 0) {
             output.add(current);
             return;
         }
 
-        if(open!=0){
-            helper(output,open-1,closed,current+"(");
+        if (open != 0) {
+            helper(output, open - 1, closed, current + "(");
         }
-        if(open<closed){
-            helper(output,open,closed-1,current+")");
+        if (open < closed) {
+            helper(output, open, closed - 1, current + ")");
         }
     }
 
     //Q23 Josephus problem - which position guy left in the end
-    static int josephus(int n, int k){
+    static int josephus(int n, int k) {
         ArrayList<Integer> positions = new ArrayList<>();
-        for(int i =0; i<=n; i++){
+        for (int i = 0; i <= n; i++) {
             positions.add(i);
         }
-        josephusUtil(n, k ,1,positions );
+        josephusUtil(n, k, 1, positions);
         return positions.getFirst();
     }
-    static void josephusUtil(int n, int k, int i, ArrayList<Integer> positions){
-        if(n==1){
+
+    static void josephusUtil(int n, int k, int i, ArrayList<Integer> positions) {
+        if (n == 1) {
             return;
         }
         //remove the i+k-1 th guy
-         int nextIndex = (i+k-1)%n;
-         positions.remove(nextIndex);
-         josephusUtil(n-1,k,nextIndex,positions);
+        int nextIndex = (i + k - 1) % n;
+        positions.remove(nextIndex);
+        josephusUtil(n - 1, k, nextIndex, positions);
     }
+
+    static String max;
+
+    static String largestNumInKSwaps(String num, int k) {
+        max = num;
+        char[] arr = num.toCharArray();
+        solve(arr, k);
+        return max;
+    }
+
+    static void solve(char[] arr, int k) {
+        if (k == 0) return;
+
+        int n = arr.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+
+                if (arr[j] > arr[i]) {
+                    swap(arr, i, j);
+
+                    String curr = new String(arr);
+                    if (curr.compareTo(max) > 0) {
+                        max = curr;
+                    }
+
+                    solve(arr, k - 1);
+
+                    swap(arr, i, j); // backtrack
+                }
+            }
+        }
+    }
+
+    static void swap(char[] arr, int i, int j) {
+        char temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+
+
 
 }
 
